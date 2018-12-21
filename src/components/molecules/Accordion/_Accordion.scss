@@ -1,0 +1,55 @@
+.accordion {
+	width: 100%;
+
+	&.isOpen {
+		.accordion-content {
+			display: block;
+		}
+
+		.toggle-icon-container svg {
+			transform: rotate(45deg);
+		}
+	}
+
+	header {
+		display: flex;
+		cursor: pointer;
+		padding: 1em;
+
+		.header-content {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+			font-size: 20px;
+			font-weight: 600;
+			justify-content: center;
+		}
+
+		.icon {
+			align-items: center;
+			box-sizing: border-box;
+			display: flex;
+			padding: 0 1em;
+			width: 60px;
+		}
+
+		.toggle-icon-container {
+			width: 30px;
+
+			svg {
+				transition: $transitionDefault;
+			}
+		}
+	}
+
+	.accordion-content {
+		display: none;
+		padding: 1em;
+	}
+
+	@media all and (max-width: 500px) {
+		aside {
+			padding: 0;
+		}
+	}
+}

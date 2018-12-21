@@ -1,0 +1,632 @@
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+
+$screen-md: 992px !default;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+
+$screen-xs: 480px !default;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+
+$screen-md-max: ($screen-lg-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+
+$media-query-sizes: (
+	xs: $screen-xs,
+	sm: $screen-sm,
+	md: $screen-md,
+	lg: $screen-lg,
+);
+
+$breakpoint_phone: 768px !default;
+$breakpoint_tablet: 980px !default;
+
+@mixin respond-to($types...) {
+	$maxWidth: -1;
+	$minWidth: -1;
+
+	@each $type in $types {
+		@if $type == phone {
+			$maxWidth: if($maxWidth == -1, $breakpoint_phone - 1, $maxWidth);
+			$minWidth: 0;
+		} @else if $type == tablet {
+			@if $maxWidth != 0 {
+				$maxWidth: if(
+					$maxWidth == -1,
+					$breakpoint_tablet - 1,
+					max($breakpoint_tablet - 1, $maxWidth)
+				);
+			}
+
+			$minWidth: if(
+				$minWidth == -1,
+				$breakpoint_phone,
+				min($breakpoint_phone, $minWidth)
+			);
+		} @else if $type == desktop {
+			$maxWidth: 0;
+			$minWidth: if($minWidth == -1, $breakpoint_tablet, $minWidth);
+		}
+	}
+
+	@if $maxWidth <= 0 and $minWidth <= 0 {
+		@content;
+	} @else if $maxWidth <= 0 {
+		@media (min-width: $minWidth) {
+			@content;
+		}
+	} @else if $minWidth <= 0 {
+		@media (max-width: $maxWidth) {
+			@content;
+		}
+	} @else {
+		@media (min-width: $minWidth) and (max-width: $maxWidth) {
+			@content;
+		}
+	}
+}
+
+$experimental-support-for-webkit: true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+@mixin experimental(
+	$property,
+	$value,
+	$moz: $experimental-support-for-mozilla,
+	$webkit: $experimental-support-for-webkit,
+	$o: $experimental-support-for-opera,
+	$ms: $experimental-support-for-microsoft,
+	$khtml: $experimental-support-for-khtml,
+	$official: true
+) {
+	@if $webkit and $experimental-support-for-webkit {
+		-webkit-#{$property}: $value;
+	}
+	@if $khtml and $experimental-support-for-khtml {
+		-khtml-#{$property}: $value;
+	}
+	@if $moz and $experimental-support-for-mozilla {
+		-moz-#{$property}: $value;
+	}
+	@if $ms and $experimental-support-for-microsoft {
+		-ms-#{$property}: $value;
+	}
+	@if $o and $experimental-support-for-opera {
+		-o-#{$property}: $value;
+	}
+	@if $official {
+		#{$property}: $value;
+	}
+}
+
+// Same as experimental(), but for cases when the property is the same and the value is vendorized
+@mixin experimental-value(
+	$property,
+	$value,
+	$moz: $experimental-support-for-mozilla,
+	$webkit: $experimental-support-for-webkit,
+	$o: $experimental-support-for-opera,
+	$ms: $experimental-support-for-microsoft,
+	$khtml: $experimental-support-for-khtml,
+	$official: true
+) {
+	@if $webkit and $experimental-support-for-webkit {
+		#{$property}: -webkit-#{$value};
+	}
+	@if $khtml and $experimental-support-for-khtml {
+		#{$property}: -khtml-#{$value};
+	}
+	@if $moz and $experimental-support-for-mozilla {
+		#{$property}: -moz-#{$value};
+	}
+	@if $ms and $experimental-support-for-microsoft {
+		#{$property}: -ms-#{$value};
+	}
+	@if $o and $experimental-support-for-opera {
+		#{$property}: -o-#{$value};
+	}
+	@if $official {
+		#{$property}: #{$value};
+	}
+}
+
+@mixin filter-gradient($start-color, $end-color, $orientation: vertical) {
+	$gradient-type: if($orientation == vertical, 0, 1);
+
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=#{$gradient-type}, startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}');
+}
+
+@mixin force-wrap {
+	white-space: -hp-pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: pre-line;
+	white-space: pre-wrap;
+	white-space: pre;
+	word-wrap: break-word;
+}
+
+@mixin hyphenation {
+	@include hyphens(auto);
+	@include word-wrap;
+}
+
+@mixin flexbox {
+	@include experimental-value(
+		display,
+		box,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental-value(
+		display,
+		flex,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+	@include experimental-value(
+		display,
+		flexbox,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+}
+
+@mixin inline-flex {
+	@include experimental-value(
+		display,
+		inline-box,
+		not -moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental-value(
+		display,
+		inline-flex,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+	@include experimental-value(
+		display,
+		inline-flexbox,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+}
+
+/* ---------- Flex container behavior ---------- */
+
+@mixin flex-direction($value: row) {
+	$direction-value: normal;
+	$orient-value: horizontal;
+
+	@if $value == 'row-reverse' {
+		$direction-value: reverse;
+	} @else if $value == 'column' {
+		$orient-value: vertical;
+	} @else if $value == 'column-reverse' {
+		$direction-value: reverse;
+		$orient-value: vertical;
+	}
+
+	@include experimental(
+		box-direction,
+		$direction-value,
+		not -moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		box-orient,
+		$orient-value,
+		not -moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		flex-direction,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		official
+	);
+}
+
+@mixin flex-wrap($value: nowrap) {
+	$wrap-value: $value;
+
+	@if $value == 'nowrap' {
+		$wrap-value: none;
+	}
+
+	@include experimental(
+		flex-wrap,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+	@include experimental(
+		flex-wrap,
+		$wrap-value,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+}
+
+@mixin flex-flow(
+	$values: (
+		row nowrap,
+	)
+) {
+	@include experimental(
+		flex-flow,
+		$values,
+		-moz,
+		-webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		official
+	);
+}
+
+/* ---------- Flex container alignment ---------- */
+
+@mixin align-content($value: stretch) {
+	$align-value: $value;
+
+	@if $value == 'flex-start' {
+		$align-value: start;
+	} @else if $value == 'flex-end' {
+		$align-value: end;
+	}
+
+	@include experimental(
+		flex-line-pack,
+		$align-value,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+
+	@include experimental(
+		align-content,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+}
+
+@mixin justify-content($value: flex-start) {
+	$pack-value: $value;
+
+	@if $value == 'flex-start' {
+		$pack-value: start;
+	} @else if $value == 'flex-end' {
+		$pack-value: end;
+	}
+
+	@include experimental(
+		box-pack,
+		$pack-value,
+		not -moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		flex-pack,
+		$pack-value,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		justify-content,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+}
+
+/* ---------- Flex items ---------- */
+
+@mixin flex($values, $flex-width: false) {
+	@include experimental(
+		box-flex,
+		$values,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		flex,
+		$values,
+		-moz,
+		-webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		official
+	);
+
+	@if $flex-width {
+		width: $flex-width;
+	}
+}
+
+@mixin flex-basis($value: auto) {
+	@include experimental(
+		flex-basis,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+	@include experimental(
+		flex-preferred-size,
+		$value,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+}
+
+@mixin flex-grow($int: 0) {
+	@include experimental(
+		flex-grow,
+		$int,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+	@include experimental(
+		flex-positive,
+		$int,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+}
+
+@mixin flex-shrink($int: 1) {
+	@include experimental(
+		flex-negative,
+		$int,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		flex-shrink,
+		$int,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+}
+
+@mixin order($int: 0) {
+	@include experimental(
+		box-ordinal-group,
+		$int,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		flex-order,
+		$int,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		order,
+		$int,
+		-moz,
+		-webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		official
+	);
+}
+
+/* ---------- Flex item alignment ---------- */
+
+@mixin align-items($value: stretch) {
+	$align-value: $value;
+
+	@if $value == 'flex-start' {
+		$align-value: start;
+	} @else if $value == 'flex-end' {
+		$align-value: end;
+	}
+
+	@include experimental(
+		box-align,
+		$align-value,
+		not -moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		not official
+	);
+	@include experimental(
+		flex-align,
+		$align-value,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+
+	@include experimental(
+		align-items,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+}
+
+@mixin align-self($value: auto) {
+	$align-value: $value;
+
+	@if $value == 'flex-start' {
+		$align-value: start;
+	} @else if $value == 'flex-end' {
+		$align-value: end;
+	}
+
+	@include experimental(
+		flex-item-align,
+		$align-value,
+		not -moz,
+		not -webkit,
+		not -o,
+		-ms,
+		not -khtml,
+		not official
+	);
+
+	@include experimental(
+		align-self,
+		$value,
+		-moz,
+		-webkit,
+		not -o,
+		not -ms,
+		not -khtml,
+		official
+	);
+}
+
+@mixin text-animation($number) {
+	@keyframes animation#{$number} {
+		0% {
+			opacity: 0;
+			transform: translateX(-6em);
+			width: 0;
+			// text-align: center;
+		}
+		10% {
+			opacity: 1;
+			transform: translateX(0);
+			width: 100%;
+			// text-align: right;
+		}
+		80% {
+			opacity: 1;
+			transform: translateX(0);
+			width: 100%;
+			// text-align: right;
+		}
+		100% {
+			opacity: 0;
+			transform: translateX(1em);
+			width: 0;
+			// text-align: center;
+		}
+	}
+}

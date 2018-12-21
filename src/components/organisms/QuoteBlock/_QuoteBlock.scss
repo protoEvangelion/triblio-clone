@@ -1,0 +1,96 @@
+.quote-block {
+	align-items: center;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: $elevation1;
+	display: flex;
+	margin: 6.125rem auto;
+	max-width: 885px;
+	padding: 30px;
+
+	&:after {
+		background: linear-gradient(
+				90deg,
+				transparent,
+				transparent 50%,
+				#fff 50%,
+				#fff 100%
+			),
+			linear-gradient(90deg, #fff, #79cd50, #19ab4f, #79cd51, #fff);
+		background-size: 20px 3px, 100% 3px;
+		border: none;
+		content: '';
+		height: 1px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.profile-image {
+		filter: grayscale(100%);
+		height: 121px;
+		margin-right: -90px;
+		position: relative;
+		width: 121px;
+	}
+
+	.quote-wrapper {
+		padding-right: 45px;
+	}
+}
+
+.quote-block-wrapper {
+	border: none;
+	box-sizing: border-box;
+	margin: 0 1rem;
+	padding: 0;
+}
+
+@media all and (max-width: 991px) {
+	.quote-block-wrapper {
+		padding-right: initial;
+	}
+
+	.quote-block {
+		flex-direction: column-reverse;
+		padding-top: 50px;
+
+		.profile-image {
+			height: 80px;
+			margin-right: initial;
+			margin-top: -90px;
+			top: 0;
+			width: 80px;
+		}
+
+		.quote-wrapper {
+			margin-right: initial;
+			padding-right: initial;
+
+			&:before {
+				font-size: 80px;
+				left: auto;
+				line-height: 85px;
+				top: 25px;
+			}
+		}
+	}
+}
+
+@include respond-to(phone) {
+	.quote-block-wrapper .quote-block {
+		margin: 6.125rem 0.5rem;
+		padding: 4.5rem 1rem 2.5rem;
+
+		.profile-image {
+			margin-top: -7rem;
+		}
+	}
+}
+
+@media all and (max-width: 500px) {
+	.quote-block-wrapper {
+		margin: 0;
+	}
+}

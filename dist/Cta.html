@@ -1,0 +1,159 @@
+<style>
+	.button {
+		background-image: -webkit-linear-gradient(236.15deg, #79cd51 0%, #19ab4f 83.33%);
+		background-image: linear-gradient(213.85deg, #79cd51 0%, #19ab4f 83.33%);
+		background-size: 110% 100%;
+		background-size: 150% auto;
+		border-radius: 4px;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-family: 'Source Sans Pro';
+		font-size: 18px;
+		font-weight: 600;
+		padding: 1rem 1.5rem;
+		-webkit-transition: background 0.3s, box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s
+	}
+
+	.button.dark {
+		background: #383f4c;
+		font-size: 16px;
+		font-weight: bold
+	}
+
+	.button.dark:hover {
+		background: #424956
+	}
+
+	.button.light {
+		background: #fff;
+		color: transparent;
+		font-size: 16px;
+		font-weight: bold
+	}
+
+	.button.light:hover {
+		background: #fff;
+		box-shadow: 0 3px 12px rgba(9, 16, 29, 0.09), 0 0 4px rgba(9, 16, 29, 0.06)
+	}
+
+	.button.light:hover span {
+		color: #19ab4f
+	}
+
+	.button.light span {
+		background-image: -webkit-linear-gradient(right, #79cd51, #19ab4f);
+		background-image: linear-gradient(to left, #79cd51, #19ab4f);
+		-webkit-background-clip: text;
+		background-clip: text
+	}
+
+	.button:hover {
+		background: -webkit-linear-gradient(#19ab4f, #19ab4f);
+		background: linear-gradient(#19ab4f, #19ab4f);
+		box-shadow: 0px 3px 12px rgba(9, 16, 29, 0.09), 0px 0px 4px rgba(9, 16, 29, 0.06);
+		-webkit-transition: background 0.3s, box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s
+	}
+
+	@media (max-width: 767px) {
+		.button {
+			padding: 0.75rem 1rem;
+			font-weight: bold;
+			font-size: 16px
+		}
+	}
+
+	.cta-section {
+		margin: 0 auto;
+		max-width: 1200px;
+		overflow: hidden;
+		padding: 200px 0 238px
+	}
+
+	.cta-section.bg {
+		background: -webkit-linear-gradient(202deg, #79cd51 0%, #19ab4f 83.33%);
+		background: linear-gradient(248deg, #79cd51 0%, #19ab4f 83.33%);
+		margin: 0;
+		max-width: 100%
+	}
+
+	.cta-section.add-background .d1 {
+		opacity: 0.5
+	}
+
+	.cta-section.add-background .large {
+		color: #fff;
+		opacity: 0.9
+	}
+
+	.cta-section .buttonSvg {
+		padding: 0 24px;
+		position: relative
+	}
+
+	.cta-section .buttonSvg .button.light {
+		width: 197px
+	}
+
+	.cta-section .buttonSvg svg {
+		padding-left: 40px;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 1200px
+	}
+
+	.cta-section .d1 {
+		opacity: 1;
+		padding: 0 24px 8px
+	}
+
+	.cta-section .large {
+		opacity: 1;
+		padding: 0 24px 32px
+	}
+
+	@media (max-width: 979px) {
+		.cta-section {
+			overflow: hidden;
+			padding: 0 0 138px
+		}
+
+		.cta-section .buttonSvg .button.light {
+			width: 192px
+		}
+
+		.cta-section .buttonSvg svg {
+			padding-left: 21px
+		}
+
+		.cta-section .d1 {
+			opacity: 1;
+			padding: 0 24px
+		}
+
+		.cta-section .large {
+			padding: 0 24px 24px
+		}
+	}
+</style>
+
+<aside class="cta-section text-left  bg">
+	<h2 class="d1">Talk to an Expert</h2>
+	<p class="large semibold">Dive into award winning ABM case studies.</p>
+	<div class="buttonSvg"><a href="https://triblio.com/request-demo"><button class="button "><span>Talk to ABM Expert</span></button></a><svg
+		 viewBox="0 0 1044 14" fill="none" name="dividerHorizontal">
+			<path d="M21.986 7H1248.01" stroke="url(#footer-cta-line-gradient)" stroke-linecap="round" stroke-linejoin="round"
+			 stroke-dasharray="6 6"></path>
+			<path clip-rule="evenodd" d="M13 7A6 6 0 1 0 1 7a6 6 0 0 0 12 0z" stroke="#fff"></path>
+			<defs>
+				<linearGradient id="footer-cta-line-gradient" x1="1249" y1="6" x2="21" y2="6" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#fff" stop-opacity="0"></stop>
+					<stop offset="0.508" stop-color="#fff"></stop>
+				</linearGradient>
+			</defs>
+		</svg></div>
+</aside>

@@ -1,0 +1,130 @@
+b,
+strong {
+	font-weight: $fontWeightBold;
+}
+
+blockquote {
+	font-size: 1.25em;
+	line-height: 1.25;
+
+	@include respond-to(phone, tablet) {
+		font-size: 1.5em;
+		line-height: 1.5;
+	}
+}
+
+h1,
+.font-spec-1,
+.f1 {
+	@extend %font-spec-1;
+}
+
+h2,
+.font-spec-2,
+.f2 {
+	@extend %font-spec-2;
+}
+
+h3,
+.font-spec-3,
+.f3 {
+	@extend %font-spec-3;
+}
+
+h4,
+.font-spec-4,
+.f4 {
+	@extend %font-spec-4;
+}
+
+h5,
+.font-spec-5,
+.f5 {
+	@extend %font-spec-5;
+}
+
+h6,
+.font-spec-6,
+.f6 {
+	@extend %font-spec-6;
+}
+
+p {
+	font-family: 'Source Sans Pro';
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+
+	&.fine-print {
+		@extend %font-spec-fine-print;
+	}
+
+	&.large {
+		@extend %font-spec-large;
+	}
+
+	&.semibold {
+		font-weight: $fontWeightSemiBold;
+	}
+}
+
+span {
+	font-family: 'Source Sans Pro';
+}
+
+.d1 {
+	color: $grey;
+	font-size: 107px;
+	line-height: 152px;
+	font-weight: $fontWeightBold;
+
+	@media all and (max-width: 1199px) {
+		font-size: 78px;
+		line-height: 87px;
+	}
+
+	@media all and (max-width: 991px) {
+		font-size: 60px;
+		line-height: 67px;
+	}
+
+	@media all and (max-width: 768px) {
+		font-size: 46px;
+		line-height: 56px;
+	}
+}
+
+.d2 {
+	font-size: 86px;
+	line-height: 96px;
+	font-weight: $fontWeightBold;
+
+	@media all and (max-width: 1199px) {
+		font-size: 62px;
+		line-height: 70px;
+	}
+
+	@media all and (max-width: 991px) {
+		font-size: 48px;
+		line-height: 54px;
+	}
+
+	@media all and (max-width: 768px) {
+		font-size: 41px;
+		line-height: 48px;
+	}
+}
+
+.page-heading .preheading,
+.preheading {
+	font-size: 1em;
+}
+
+.small-caps {
+	@extend %small-caps;
+}
+
+.subheading {
+	color: $neutral5Color;
+	font-weight: $fontWeightDefault;
+}

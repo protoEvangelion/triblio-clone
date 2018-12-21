@@ -1,0 +1,299 @@
+<style>
+	.quote-wrapper {
+		padding-left: 4.25rem;
+		padding-top: 1rem
+	}
+
+	.quote-wrapper p.large {
+		color: #383f4c;
+		font-weight: 600;
+		position: relative
+	}
+
+	.quote-wrapper p.large:before {
+		background: -webkit-linear-gradient(#79cd51, #19ab4f);
+		content: '\201C';
+		font-size: 120px;
+		font-weight: 600;
+		left: -74px;
+		line-height: 128px;
+		position: absolute;
+		top: -40px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent
+	}
+
+	.quote-wrapper .quotee {
+		font-weight: 700
+	}
+
+	.quote-wrapper .quotee,
+	.quote-wrapper .quotee-title {
+		color: #647480
+	}
+
+	.quote-wrapper .quotee-title {
+		font-weight: 300
+	}
+
+	@media (max-width: 767px) {
+		.quote-wrapper {
+			padding-left: 0
+		}
+
+		.quote-wrapper p.large:before {
+			font-size: 80px;
+			font-weight: bold;
+			left: -5px;
+			line-height: 128px;
+			position: absolute;
+			top: -4.5rem
+		}
+	}
+
+	.quote-video {
+		padding-bottom: 5em;
+		width: 50%
+	}
+
+	.quote-video .preheading {
+		padding-top: 6.5em
+	}
+
+	.quote-video .quote-container {
+		height: auto;
+		max-width: 520px;
+		padding: 4.7em 1em 0 1.3em
+	}
+
+	.quote-video .video {
+		height: 270px;
+		margin: 0 auto;
+		max-width: 480px;
+		position: relative;
+		width: 90%
+	}
+
+	.quote-video .video:hover {
+		cursor: pointer
+	}
+
+	.quote-video .video:hover .play circle {
+		fill: #fff
+	}
+
+	.quote-video .video:hover .play .outerCircle {
+		fill: url(#play_linear2)
+	}
+
+	.quote-video .video:hover .play .playButton {
+		fill: url(#play_linear)
+	}
+
+	.quote-video .video .play {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%)
+	}
+
+	.quote-video .video .video-img {
+		border-radius: 10px;
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1525), 0 12px 30px rgba(0, 0, 0, 0.1525);
+		height: 100%;
+		opacity: 1;
+		-webkit-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+		-webkit-transition: opacity, visibility;
+		transition: opacity, visibility;
+		visibility: visible;
+		width: 100%
+	}
+
+	.quote-video .video .video-logo {
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 8px 40px rgba(9, 16, 29, 0.08), 0 0 80px rgba(9, 16, 29, 0.04);
+		height: 99px;
+		left: 15%;
+		position: absolute;
+		top: 82%;
+		width: 230px
+	}
+
+	.quote-video .video .video-youtube {
+		border-radius: 10px;
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1525), 0 12px 30px rgba(0, 0, 0, 0.1525);
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		visibility: hidden
+	}
+
+	.quote-video .video.active .video-img {
+		height: 0;
+		opacity: 0;
+		visibility: hidden
+	}
+
+	.quote-video .video.active .video-logo {
+		opacity: 0;
+		-webkit-transform: translateY(90%);
+		transform: translateY(90%);
+		-webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out
+	}
+
+	.quote-video .video.active .video-youtube {
+		height: 100%;
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: opacity, visibility;
+		transition: opacity, visibility;
+		-webkit-transition-duration: 1s;
+		transition-duration: 1s
+	}
+
+	.quote-video .video.active .video-youtube .fluid-width-video-wrapper {
+		height: 100%;
+		padding-top: unset !important;
+		position: static;
+		width: 100%
+	}
+
+	.quote-video .video.active .video-youtube .fluid-width-video-wrapper iframe {
+		position: static
+	}
+
+	@media (max-width: 979px) {
+		.quote-video {
+			width: 100%
+		}
+
+		.quote-video .preheading {
+			padding-top: 0
+		}
+
+		.quote-video .quote-container {
+			margin: 0 auto;
+			padding: 6rem 0
+		}
+
+		.quote-video .video {
+			width: 100%
+		}
+
+		.quote-video .video .video-img {
+			background-position: center
+		}
+	}
+
+	@media (max-width: 767px) {
+		.quote-video {
+			padding-bottom: 3.5rem
+		}
+
+		.quote-video .preheading {
+			margin: 1rem 0
+		}
+	}
+</style>
+
+<div id="reactRoot">
+	<div class="quote-video" data-reactroot="">
+		<p class="preheading small-caps text-center">Scale ABM for 10,000+ Accounts</p>
+		<div class="video">
+			<div class="video-img" style="background:linear-gradient(rgba(0, 173, 239, 0.2), rgba(0, 173, 239, 0.2)), url(https://triblio.com/wp-content/uploads/2018/11/plex-image.jpg);background-position:center;background-size:cover"><svg
+				 viewBox="0 0 202 202" fill="none" class="play" height="202" name="play" width="202">
+					<g opacity="0.45" filter="url(#play_filter)">
+						<path d="M181.5 91c0 44.459-36.041 80.5-80.5 80.5S20.5 135.459 20.5 91 56.541 10.5 101 10.5s80.5 36.041 80.5 80.5z"
+						 stroke="#fff" stroke-opacity="0.247"></path>
+					</g>
+					<g filter="url(#play_filter2)">
+						<path d="M166.5 91c0 36.175-29.325 65.5-65.5 65.5S35.5 127.175 35.5 91 64.825 25.5 101 25.5s65.5 29.325 65.5 65.5z"
+						 stroke="#fff" stroke-opacity="0.247"></path>
+					</g>
+					<g filter="url(#play_filter3)">
+						<path class="outerCircle" fill-rule="evenodd" clip-rule="evenodd" d="M101 143c28.719 0 52-23.281 52-52s-23.281-52-52-52-52 23.281-52 52 23.281 52 52 52z"
+						 fill="#fff"></path>
+						<path d="M152.5 91c0 28.443-23.057 51.5-51.5 51.5S49.5 119.443 49.5 91 72.557 39.5 101 39.5s51.5 23.057 51.5 51.5z"
+						 stroke="#69B11D" stroke-opacity="0.602"></path>
+					</g>
+					<circle cx="101" cy="91" r="40" fill="url(#play_linear)"></circle>
+					<path class="playButton" d="M93 107.245v-33.49c0-2.6 3.082-3.969 5.012-2.225l18.526 16.744a3.001 3.001 0 0 1 0 4.452L98.012 109.47c-1.93 1.744-5.012.375-5.012-2.225z"
+					 fill="#fff"></path>
+					<defs>
+						<filter id="play_filter" x="0" y="0" width="202" height="202" filterUnits="userSpaceOnUse"
+						 color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+							<feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix>
+							<feOffset dy="10"></feOffset>
+							<feGaussianBlur stdDeviation="10"></feGaussianBlur>
+							<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.206409 0"></feColorMatrix>
+							<feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend>
+							<feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend>
+						</filter>
+						<filter id="play_filter2" x="15" y="15" width="172" height="172" filterUnits="userSpaceOnUse"
+						 color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+							<feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix>
+							<feOffset dy="10"></feOffset>
+							<feGaussianBlur stdDeviation="10"></feGaussianBlur>
+							<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.206409 0"></feColorMatrix>
+							<feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend>
+							<feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend>
+						</filter>
+						<filter id="play_filter3" x="29" y="29" width="144" height="144" filterUnits="userSpaceOnUse"
+						 color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+							<feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix>
+							<feOffset dy="10"></feOffset>
+							<feGaussianBlur stdDeviation="10"></feGaussianBlur>
+							<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.206409 0"></feColorMatrix>
+							<feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend>
+							<feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend>
+						</filter>
+						<linearGradient id="play_linear" x1="141" y1="51" x2="61" y2="91" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#79CD51"></stop>
+							<stop offset="1" stop-color="#19AB4F"></stop>
+						</linearGradient>
+						<linearGradient id="play_linear2" x1="153" y1="39" x2="49" y2="91" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#79CD51"></stop>
+							<stop offset="1" stop-color="#19AB4F"></stop>
+						</linearGradient>
+					</defs>
+				</svg></div><img alt="Logo" class="video-logo" src="https://triblio.com/wp-content/uploads/2018/11/Bitmap-1.png" />
+			<div class="video-youtube"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				 allowfullscreen="" frameBorder="0" height="100%" src="https://www.youtube.com/embed/YMsPRAZzn6M?rel=0" title="triblio"
+				 width="100%"></iframe></div>
+		</div>
+		<div class="quote-container">
+			<div class="quote-wrapper">
+				<p class="large quote">We’re doing a tremendous amount of campaigns because it’s really easy.</p>
+				<p class="f6"><span class="quotee">Jennifer Dimas</span><span> </span><span class="quotee-title">VP of Integrated
+						Marketing</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	(function setupVideoState() {
+		const videoNodes = document.getElementsByClassName('quote-video');
+		[...videoNodes].forEach(video => {
+			let playState = false;
+			video.querySelector('.video-img').addEventListener('click', () => {
+				playState = !playState;
+				const iframeNode = video.querySelector('iframe');
+				const videoWrapperNode = video.querySelector('.video');
+				videoWrapperNode.classList.toggle('active');
+				iframeNode.src = `${iframeNode.src}${
+playState ? '&autoplay=1' : ''
+}`;
+			});
+		});
+	})();
+</script>

@@ -1,0 +1,20 @@
+<svg
+	viewBox="0 0 35 35"
+	height="35"
+	name="moreCircle"
+	width="35"
+>
+	<ellipse
+		cx="18"
+		cy="18"
+		fill="none"
+		rx="8"
+		ry="8"
+		stroke="currentColor"
+	/>
+	<path
+		d="M14 18h8m-4 4v-8"
+		fill="none"
+		stroke="currentColor"
+	/>
+</svg>

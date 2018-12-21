@@ -1,0 +1,60 @@
+@import '../../styles/shared';
+
+.triblio-custom {
+	@import '../../styles/utilities';
+	@import '../../styles/typography.scss';
+
+	@extend %font;
+
+	@import '../../components/atoms/ArchitectureBlock/ArchitectureBlock';
+	@import '../../components/atoms/BrandedHeader/BrandedHeader';
+	@import '../../components/atoms/Button/Button';
+	@import '../../components/atoms/ProfileImage/ProfileImage';
+	@import '../../components/atoms/Quote/Quote';
+
+	@import '../../components/molecules/Accordion/Accordion';
+	@import '../../components/molecules/InfoBlock/InfoBlock';
+	@import '../../components/molecules/InfoBlockCollection/InfoBlockCollection';
+
+	@import '../../components/organisms/Architecture/Architecture';
+	@import '../../components/organisms/CTA/CTA';
+	@import '../../components/organisms/PlatformFeatures/PlatformFeatures';
+	@import '../../components/organisms/ProductHero/ProductHero';
+	@import '../../components/organisms/QuoteBlock/QuoteBlock';
+
+	&.animated-bg {
+		background-image: #fff;
+		background-size: 100%;
+		position: relative;
+		z-index: 100;
+
+		&:before {
+			background-image: linear-gradient(
+				248deg,
+				#79cd51 0%,
+				#19ab4f 83.33%
+			);
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			transition: opacity 0.5s ease-in-out;
+			width: 100%;
+			z-index: -100;
+		}
+
+		&.add-background {
+			&:before {
+				opacity: 1;
+			}
+
+			.architecture-background {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}

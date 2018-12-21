@@ -1,0 +1,48 @@
+@import '../InfoBlock/InfoBlock';
+
+.info-block-collection-wrapper {
+	background: linear-gradient(
+		180deg,
+		rgba(247, 248, 249, 0) 0%,
+		#ffffff 100%
+	);
+}
+
+.info-block-collection {
+	box-sizing: border-box;
+	display: flex;
+	margin: auto;
+	padding: 0em 25px;
+
+	.info-block {
+		padding: 0 25px;
+		width: -webkit-fill-available;
+	}
+
+	.info-block:nth-of-type(4n + 1) {
+		padding-left: 0;
+	}
+
+	.info-block:nth-of-type(3n + 3) {
+		padding-right: 0;
+	}
+
+	@include respond-to(tablet) {
+		padding: 0 4rem;
+	}
+
+	@include respond-to(phone) {
+		padding: 0 1.5rem;
+		flex-direction: column;
+
+		.branded-header:after {
+			left: auto;
+			transform: none;
+		}
+
+		.info-block {
+			padding: 0 0 3rem 0;
+			padding-bottom: 3rem;
+		}
+	}
+}

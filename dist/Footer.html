@@ -1,0 +1,394 @@
+<style>
+	#main-footer {
+		display: none
+	}
+
+	.triblio-custom .footer {
+		background: initial;
+		margin: auto;
+		padding-top: 80px
+	}
+
+	.triblio-custom .footer,
+	.triblio-custom .footer .w50 {
+		display: -webkit-box;
+		display: flex
+	}
+
+	.triblio-custom .footer h4 {
+		font-weight: normal
+	}
+
+	.triblio-custom .footer h4,
+	.triblio-custom .footer .nav-item {
+		font-size: 14.4px;
+		line-height: 18px
+	}
+
+	.triblio-custom .footer .additional-links {
+		float: right
+	}
+
+	.triblio-custom .footer .footer-navigation,
+	.triblio-custom .footer .footer-base {
+		padding: 0 24px
+	}
+
+	.triblio-custom .footer .column.w33 {
+		box-sizing: border-box;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-direction: column
+	}
+
+	.triblio-custom .footer .column a {
+		color: rgba(100, 100, 100, 0.5);
+		margin-right: 40px
+	}
+
+	.triblio-custom .footer .column a.column-heading {
+		color: #646464
+	}
+
+	.triblio-custom .footer .footer-address {
+		padding-top: 28px
+	}
+
+	.triblio-custom .footer .footer-base {
+		margin-top: 62px;
+		padding-bottom: 20px;
+		position: relative;
+		width: 100%
+	}
+
+	.triblio-custom .footer .footer-base:after {
+		background: -webkit-linear-gradient(268.77deg, #79cd51 0%, #19ab4f 83.33%);
+		background: linear-gradient(181.23deg, #79cd51 0%, #19ab4f 83.33%);
+		bottom: 0px;
+		content: '';
+		height: 4px;
+		left: 0px;
+		position: absolute;
+		width: 100%
+	}
+
+	.triblio-custom .footer .footer-base a,
+	.triblio-custom .footer .footer-base span {
+		color: #383f4c;
+		font-size: 11.5px;
+		line-height: 16px
+	}
+
+	.triblio-custom .footer .footer-navigation .block {
+		padding-right: 40px
+	}
+
+	.triblio-custom .footer .footer-navigation .block li {
+		padding-bottom: 32px
+	}
+
+	.triblio-custom .footer .mobile {
+		display: none;
+		padding: 8px
+	}
+
+	.triblio-custom .footer .mobile>svg {
+		margin-bottom: 40px
+	}
+
+	.triblio-custom .footer .mobile aside {
+		padding: 0px
+	}
+
+	.triblio-custom .footer .mobile .accordion {
+		background-color: #fff;
+		border-radius: 12px;
+		box-shadow: 0 3px 12px rgba(9, 16, 29, 0.09), 0 0 4px rgba(9, 16, 29, 0.06);
+		box-sizing: border-box;
+		margin-bottom: 16px
+	}
+
+	.triblio-custom .footer .mobile .accordion.isOpen .title:after {
+		background: -webkit-linear-gradient(252.63deg, #79cd51 0%, #19ab4f 83.33%);
+		background: linear-gradient(197.37deg, #79cd51 0%, #19ab4f 83.33%);
+		bottom: -22px;
+		content: '';
+		height: 4px;
+		left: 0;
+		position: absolute;
+		width: 24px
+	}
+
+	.triblio-custom .footer .mobile .nav-item {
+		padding-bottom: 32px
+	}
+
+	.triblio-custom .footer .mobile .title {
+		font-size: 18px;
+		line-height: 24px;
+		position: relative
+	}
+
+	.triblio-custom .footer .nav-item a {
+		color: #647480;
+		font-weight: 600
+	}
+
+	.triblio-custom .footer .social-media-icons a {
+		margin-right: 24px
+	}
+
+	.triblio-custom .footer .toggle-icon-container svg {
+		stroke-width: 2px
+	}
+
+	.triblio-custom .animated-background .footer svg .bg-animate-change {
+		fill: white
+	}
+
+	.triblio-custom .animated-background .footer .accordion {
+		background: rgba(0, 0, 0, 0.2);
+		box-shadow: none
+	}
+
+	.triblio-custom .animated-background .footer .accordion.isOpen .title:after {
+		background: #fff
+	}
+
+	.triblio-custom .animated-background .footer .additional-links,
+	.triblio-custom .animated-background .footer .footer-address p,
+	.triblio-custom .animated-background .footer .footer-base a,
+	.triblio-custom .animated-background .footer .footer-base span,
+	.triblio-custom .animated-background .footer .nav-item a {
+		color: #d7ffc4
+	}
+
+	.triblio-custom .animated-background .footer .mobile,
+	.triblio-custom .animated-background .footer .mobile a,
+	.triblio-custom .animated-background .footer .nav-item-header {
+		color: #fff
+	}
+
+	.triblio-custom .animated-background .footer .social-media-icons svg path {
+		fill: #d7ffc4
+	}
+
+	@media all and (max-width: 767px) {
+		.triblio-custom .footer {
+			padding: 80px 0 0
+		}
+
+		.triblio-custom .footer .footer-base {
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: reverse;
+			flex-direction: column-reverse;
+			margin-top: 24px;
+			padding: 0 24px 20px
+		}
+
+		.triblio-custom .footer .footer-base:after {
+			margin-top: 20px;
+			bottom: initial
+		}
+
+		.triblio-custom .footer .footer-navigation,
+		.triblio-custom .footer .w50 .triblio-logo {
+			display: none
+		}
+
+		.triblio-custom .footer .mobile {
+			display: block;
+			width: 100%
+		}
+
+		.triblio-custom .footer .w50 {
+			padding: 8px 24px;
+			width: 100%
+		}
+	}
+</style>
+<div id="reactRoot">
+	<main class="triblio-custom" data-reactroot="">
+		<div class="align-start block-container flex footer-content footer justify-space-between max-full no-padding">
+			<div class="mobile"><svg fill="none" height="40" name="footerLogo" width="112">
+					<g clip-path="url(#clip0)">
+						<path fill="#383F4C" class="bg-animate-change" d="M39.956 9.759h-6.832v29.068h6.832V9.759zm46.373 0h-6.831v29.068h6.831V9.759zM75.98 0h-6.832v38.827h6.831V0zm10.35 0h-6.831v6.229h6.831V0zM14.284 9.759H7.452v29.068h6.832V9.759z"></path>
+						<path fill="#79CD51" d="M21.945 0H0v6.229h21.945V0z"></path>
+						<path fill="#383F4C" class="bg-animate-change" d="M29.398 15.987V9.76h-2.692c-4.761 0-8.695 3.944-8.695 8.72v20.348h6.832v-20.14c0-1.454 1.242-2.7 2.691-2.7h1.864zm22.772 22.84h4.555c4.761 0 8.695-3.945 8.695-8.72V18.478c0-4.776-3.934-8.72-8.695-8.72h-6.418V0h-6.832v30.106c0 4.776 3.933 8.72 8.695 8.72zm-1.656-22.84h5.383c1.449 0 2.69 1.246 2.69 2.7V29.69c0 1.453-1.241 2.7-2.69 2.7h-2.692c-1.449 0-2.691-1.247-2.691-2.7V15.987zm52.791-6.228h-4.554c-4.762 0-8.696 3.944-8.696 8.72v11.627c0 4.776 3.934 8.72 8.695 8.72h4.555c4.762 0 8.695-3.944 8.695-8.72V18.48c0-4.983-3.933-8.72-8.695-8.72zm1.863 19.932c0 1.453-1.242 2.7-2.691 2.7h-2.691c-1.45 0-2.692-1.247-2.692-2.7V18.687c0-1.454 1.242-2.7 2.692-2.7h2.691c1.449 0 2.691 1.246 2.691 2.7V29.69zM39.956 0h-6.832v6.229h6.832V0z"></path>
+					</g>
+					<defs>
+						<clipPath id="clip0">
+							<path fill="transparent" d="M0 0h112v38.827H0z"></path>
+						</clipPath>
+					</defs>
+				</svg>
+				<div class="accordion ">
+					<header>
+						<div class="header-content">
+							<div class="title">Platform</div>
+						</div>
+						<div class="toggle-icon-container"><svg viewBox="0 0 35 35" height="35" name="toggleIndicator" width="35">
+								<ellipse cx="18" cy="18" fill="none" rx="8" ry="8" stroke="currentColor"></ellipse>
+								<path d="M14 18h8m-4 4v-8" fill="none" stroke="currentColor"></path>
+							</svg></div>
+					</header>
+					<div class="accordion-content">
+						<aside>
+							<div class="feature-content">
+								<ul>
+									<li class="nav-item"><a href="/account-based-marketing-software/">Product</a></li>
+									<li class="nav-item"><a href="/account-based-marketing-solutions/">Solutions</a></li>
+									<li class="nav-item"><a href="/account-based-marketing-examples/">Client Success</a></li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+				</div>
+				<div class="accordion ">
+					<header>
+						<div class="header-content">
+							<div class="title">Company</div>
+						</div>
+						<div class="toggle-icon-container"><svg viewBox="0 0 35 35" height="35" name="toggleIndicator" width="35">
+								<ellipse cx="18" cy="18" fill="none" rx="8" ry="8" stroke="currentColor"></ellipse>
+								<path d="M14 18h8m-4 4v-8" fill="none" stroke="currentColor"></path>
+							</svg></div>
+					</header>
+					<div class="accordion-content">
+						<aside>
+							<div class="feature-content">
+								<ul>
+									<li class="nav-item"><a href="/account-based-marketing-software/">Product</a></li>
+									<li class="nav-item"><a href="/account-based-marketing-solutions/">Solutions</a></li>
+									<li class="nav-item"><a href="/account-based-marketing-examples/">Client Success</a></li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+				</div>
+				<div class="accordion ">
+					<header>
+						<div class="header-content">
+							<div class="title">Learn</div>
+						</div>
+						<div class="toggle-icon-container"><svg viewBox="0 0 35 35" height="35" name="toggleIndicator" width="35">
+								<ellipse cx="18" cy="18" fill="none" rx="8" ry="8" stroke="currentColor"></ellipse>
+								<path d="M14 18h8m-4 4v-8" fill="none" stroke="currentColor"></path>
+							</svg></div>
+					</header>
+					<div class="accordion-content">
+						<aside>
+							<div class="feature-content">
+								<ul>
+									<li class="nav-item"><a href="/account-based-marketing-software/">Product</a></li>
+									<li class="nav-item"><a href="/account-based-marketing-solutions/">Solutions</a></li>
+									<li class="nav-item"><a href="/account-based-marketing-examples/">Client Success</a></li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-column footer-navigation w50">
+				<div class="block-container navigation no-padding">
+					<div class="block w33">
+						<h4 class="nav-item-header">Platform</h4>
+						<ul>
+							<li class="nav-item"><a href="/account-based-marketing-software/">Product</a></li>
+							<li class="nav-item"><a href="/account-based-marketing-solutions/">Solutions</a></li>
+							<li class="nav-item"><a href="/account-based-marketing-examples/">Client Success</a></li>
+						</ul>
+					</div>
+					<div class="block w33">
+						<h4 class="nav-item-header">Company</h4>
+						<ul>
+							<li class="nav-item"><a href="/about/"><span>About Us</span></a></li>
+							<li class="nav-item"><a href="/events/">Events</a></li>
+							<li class="nav-item"><a href="/partner-program/">Partners</a></li>
+						</ul>
+					</div>
+					<div class="block w33">
+						<h4 class="nav-item-header">Learn</h4>
+						<ul>
+							<li class="nav-item"><a href="/content-hub/">Content Hub</a></li>
+							<li class="nav-item"><a href="/blog/">Blog</a></li>
+							<li class="nav-item"><a href="/triblio-knowledge-base/">Resources</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-column footer-info w50">
+				<div class="triblio-logo"><svg fill="none" height="40" name="footerLogo" width="112">
+						<g clip-path="url(#clip0)">
+							<path fill="#383F4C" class="bg-animate-change" d="M39.956 9.759h-6.832v29.068h6.832V9.759zm46.373 0h-6.831v29.068h6.831V9.759zM75.98 0h-6.832v38.827h6.831V0zm10.35 0h-6.831v6.229h6.831V0zM14.284 9.759H7.452v29.068h6.832V9.759z"></path>
+							<path fill="#79CD51" d="M21.945 0H0v6.229h21.945V0z"></path>
+							<path fill="#383F4C" class="bg-animate-change" d="M29.398 15.987V9.76h-2.692c-4.761 0-8.695 3.944-8.695 8.72v20.348h6.832v-20.14c0-1.454 1.242-2.7 2.691-2.7h1.864zm22.772 22.84h4.555c4.761 0 8.695-3.945 8.695-8.72V18.478c0-4.776-3.934-8.72-8.695-8.72h-6.418V0h-6.832v30.106c0 4.776 3.933 8.72 8.695 8.72zm-1.656-22.84h5.383c1.449 0 2.69 1.246 2.69 2.7V29.69c0 1.453-1.241 2.7-2.69 2.7h-2.692c-1.449 0-2.691-1.247-2.691-2.7V15.987zm52.791-6.228h-4.554c-4.762 0-8.696 3.944-8.696 8.72v11.627c0 4.776 3.934 8.72 8.695 8.72h4.555c4.762 0 8.695-3.944 8.695-8.72V18.48c0-4.983-3.933-8.72-8.695-8.72zm1.863 19.932c0 1.453-1.242 2.7-2.691 2.7h-2.691c-1.45 0-2.692-1.247-2.692-2.7V18.687c0-1.454 1.242-2.7 2.692-2.7h2.691c1.449 0 2.691 1.246 2.691 2.7V29.69zM39.956 0h-6.832v6.229h6.832V0z"></path>
+						</g>
+						<defs>
+							<clipPath id="clip0">
+								<path fill="transparent" d="M0 0h112v38.827H0z"></path>
+							</clipPath>
+						</defs>
+					</svg></div>
+				<div class="social-media-icons">
+					<ul class="align-center block-container no-padding-horizontal standard-padding-vertical flex">
+						<li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/triblio/"><svg fill="none" height="40"
+								 name="socialFacebook" width="40">
+									<path fill="#7D8B94" fill-rule="evenodd" d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm2.085 20.878V31.76h-4.502V20.879h-2.25v-3.75h2.25v-2.251c0-3.059 1.27-4.878 4.878-4.878h3.004v3.75h-1.877c-1.405 0-1.498.524-1.498 1.502l-.005 1.877h3.402l-.399 3.75h-3.003z"
+									 clip-rule="evenodd"></path>
+								</svg></a></li>
+						<li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/triblio"><svg fill="none"
+								 height="40" name="socialLinkedIn" width="40">
+									<path fill="#7D8B94" fill-rule="evenodd" d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zM9.6 16.565h4.533v13.618H9.6V16.565zm4.832-4.213c-.03-1.335-.984-2.352-2.535-2.352-1.55 0-2.564 1.017-2.564 2.352 0 1.308.984 2.354 2.505 2.354h.03c1.58 0 2.564-1.046 2.564-2.354zm10.829 3.893c2.983 0 5.218 1.947 5.218 6.13v7.808h-4.532v-7.286c0-1.83-.656-3.078-2.297-3.078-1.252 0-1.998.841-2.325 1.655-.12.29-.15.697-.15 1.104v7.605h-4.533s.06-12.34 0-13.618h4.533v1.93c.602-.928 1.68-2.25 4.086-2.25z"
+									 clip-rule="evenodd"></path>
+								</svg></a></li>
+						<li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/triblio_inc/"><svg fill="none"
+								 height="40" name="socialInstagram" width="40">
+									<path fill="#7D8B94" fill-rule="evenodd" d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm-4.398 9.397c1.138-.051 1.502-.064 4.399-.064h-.004c2.898 0 3.26.013 4.398.064 1.136.052 1.911.232 2.591.496a5.213 5.213 0 0 1 1.89 1.23 5.234 5.234 0 0 1 1.23 1.89c.263.678.443 1.453.496 2.588.051 1.138.064 1.502.064 4.399 0 2.897-.013 3.26-.064 4.397-.053 1.135-.233 1.91-.496 2.59a5.235 5.235 0 0 1-1.23 1.888 5.22 5.22 0 0 1-1.889 1.232c-.679.263-1.455.443-2.59.495-1.138.052-1.5.065-4.398.065-2.896 0-3.26-.013-4.398-.065-1.135-.052-1.91-.232-2.589-.495a5.223 5.223 0 0 1-1.889-1.232 5.227 5.227 0 0 1-1.23-1.89c-.264-.677-.443-1.453-.496-2.588-.051-1.138-.064-1.5-.064-4.397s.013-3.26.064-4.399c.051-1.135.231-1.91.496-2.589a5.236 5.236 0 0 1 1.23-1.889 5.224 5.224 0 0 1 1.89-1.23c.679-.264 1.454-.444 2.59-.496z"
+									 clip-rule="evenodd"></path>
+									<path fill="#7D8B94" fill-rule="evenodd" d="M19.044 11.256h.957c2.848 0 3.186.01 4.31.061 1.04.048 1.605.222 1.98.368.499.193.853.424 1.227.797.373.374.604.73.798 1.227.146.376.32.94.367 1.98.051 1.125.062 1.462.062 4.31 0 2.846-.01 3.184-.062 4.308-.047 1.04-.221 1.605-.367 1.98a3.298 3.298 0 0 1-.798 1.226 3.3 3.3 0 0 1-1.226.797c-.376.147-.94.32-1.98.368-1.125.05-1.463.062-4.31.062-2.85 0-3.187-.011-4.311-.062-1.04-.048-1.605-.222-1.98-.368a3.303 3.303 0 0 1-1.227-.798 3.306 3.306 0 0 1-.799-1.226c-.146-.375-.32-.94-.367-1.98-.051-1.124-.061-1.462-.061-4.31 0-2.849.01-3.185.06-4.31.049-1.04.222-1.604.368-1.98.194-.498.425-.853.799-1.227a3.31 3.31 0 0 1 1.226-.798c.376-.146.94-.32 1.98-.368.985-.044 1.366-.057 3.354-.06v.003zm6.65 1.77a1.28 1.28 0 1 0 0 2.561 1.28 1.28 0 0 0 0-2.56zM14.523 20a5.478 5.478 0 1 1 10.956 0 5.478 5.478 0 0 1-10.956 0z"
+									 clip-rule="evenodd"></path>
+									<path fill="#7D8B94" fill-rule="evenodd" d="M20 16.445a3.556 3.556 0 1 1 0 7.11 3.556 3.556 0 0 1 0-7.11z"
+									 clip-rule="evenodd"></path>
+								</svg></a></li>
+						<li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/triblio"><svg fill="none" height="40"
+								 name="socialTwitter" width="40">
+									<path fill="#7D8B94" fill-rule="evenodd" d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm-.557 16.948l-.042-.692c-.126-1.793.98-3.432 2.728-4.067.643-.226 1.735-.254 2.448-.057.28.085.811.367 1.19.622l.685.466.755-.24c.42-.128.98-.34 1.231-.48.238-.128.448-.198.448-.156 0 .24-.518 1.06-.951 1.511-.588.636-.42.692.77.269.713-.24.727-.24.587.028-.084.141-.518.635-.98 1.087-.783.777-.825.862-.825 1.512 0 1.002-.476 3.093-.951 4.237-.882 2.146-2.77 4.364-4.659 5.48-2.658 1.567-6.197 1.963-9.177 1.045-.993-.311-2.7-1.102-2.7-1.243 0-.043.518-.1 1.147-.113a7.876 7.876 0 0 0 3.75-1.045l.755-.452-.868-.297c-1.23-.424-2.336-1.398-2.616-2.316-.084-.297-.056-.31.728-.31l.811-.015-.685-.325c-.812-.41-1.553-1.101-1.917-1.808-.266-.508-.601-1.793-.503-1.892.028-.042.321.042.657.155.965.353 1.091.269.532-.325-1.05-1.073-1.371-2.669-.868-4.18l.238-.678.923.918c1.889 1.85 4.113 2.952 6.66 3.277l.699.084z"
+									 clip-rule="evenodd"></path>
+								</svg></a></li>
+						<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCg5YQVtEZiGTcquF7y0mGVw"><svg
+								 fill="none" height="40" name="socialYouTube" width="40">
+									<path fill="#7D8B94" fill-rule="evenodd" d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm8.334 13.125c.918.251 1.641.994 1.886 1.936.446 1.708.446 5.272.446 5.272s0 3.565-.446 5.273a2.709 2.709 0 0 1-1.886 1.937C26.671 28 20 28 20 28s-6.671 0-8.335-.457a2.709 2.709 0 0 1-1.886-1.937c-.446-1.708-.446-5.273-.446-5.273s0-3.564.446-5.272a2.708 2.708 0 0 1 1.886-1.936c1.664-.458 8.335-.458 8.335-.458s6.67 0 8.334.458z"
+									 clip-rule="evenodd"></path>
+									<path fill="#7D8B94" fill-rule="evenodd" d="M18 24v-6.667l5.332 3.334L18 24z" clip-rule="evenodd"></path>
+								</svg></a></li>
+					</ul>
+				</div>
+				<div class="footer-address">
+					<p>11600 Sunrise Valley Drive<br />Suite 100<br />Reston VA 20191</p>
+				</div>
+			</div>
+			<div class="footer-base"><span class="copyright-info">© 2018 Triblio Inc. All Rights Reserved</span>
+				<div class="additional-links"><a href="/terms">Terms</a> |
+					<!-- --> <a href="/privacy">Privacy</a> |
+					<!-- --> <a href="/trustsecurity">Trust Security</a></div>
+			</div>
+		</div>
+	</main>
+</div>
+<script>
+	(function setupFooterAccordions() {
+		const menuSelection = document.getElementsByClassName('accordion');
+		for (let i = 0; i < menuSelection.length; i++) {
+			menuSelection[i].addEventListener('click', toggleClass);
+		}
+
+		function toggleClass(e) {
+			e.currentTarget.classList.toggle('isOpen');
+		}
+	})();
+</script>

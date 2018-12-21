@@ -1,0 +1,50 @@
+.quote-wrapper {
+	padding-left: 4.25rem;
+	padding-top: 1rem;
+
+	p.large {
+		color: $black;
+		font-weight: $fontWeightSemiBold;
+		position: relative;
+
+		&:before {
+			background: -webkit-linear-gradient(#79cd51, #19ab4f);
+			content: '\201C';
+			font-size: 120px;
+			font-weight: 600;
+			left: -74px;
+			line-height: 128px;
+			position: absolute;
+			top: -40px;
+
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	.quotee {
+		font-weight: $fontWeightBold;
+	}
+
+	.quotee,
+	.quotee-title {
+		color: $neutral4Color;
+	}
+
+	.quotee-title {
+		font-weight: $fontWeightLight;
+	}
+
+	@include respond-to(phone) {
+		padding-left: 0;
+
+		p.large:before {
+			font-size: 80px;
+			font-weight: bold;
+			left: -5px;
+			line-height: 128px;
+			position: absolute;
+			top: -4.5rem;
+		}
+	}
+}

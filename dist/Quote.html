@@ -1,0 +1,59 @@
+<style>
+	.quote-wrapper {
+		padding-left: 4.25rem;
+		padding-top: 1rem
+	}
+
+	.quote-wrapper p.large {
+		color: #383f4c;
+		font-weight: 600;
+		position: relative
+	}
+
+	.quote-wrapper p.large:before {
+		background: -webkit-linear-gradient(#79cd51, #19ab4f);
+		content: '\201C';
+		font-size: 120px;
+		font-weight: 600;
+		left: -74px;
+		line-height: 128px;
+		position: absolute;
+		top: -40px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent
+	}
+
+	.quote-wrapper .quotee {
+		font-weight: 700
+	}
+
+	.quote-wrapper .quotee,
+	.quote-wrapper .quotee-title {
+		color: #647480
+	}
+
+	.quote-wrapper .quotee-title {
+		font-weight: 300
+	}
+
+	@media (max-width: 767px) {
+		.quote-wrapper {
+			padding-left: 0
+		}
+
+		.quote-wrapper p.large:before {
+			font-size: 80px;
+			font-weight: bold;
+			left: -5px;
+			line-height: 128px;
+			position: absolute;
+			top: -4.5rem
+		}
+	}
+</style>
+
+<div class="quote-wrapper">
+	<p class="large quote">We’re doing a tremendous amount of campaigns because it’s really easy.</p>
+	<p class="f6"><span class="quotee">Jennifer Dimas</span><span> </span><span class="quotee-title">VP of Integrated
+			Marketing</span></p>
+</div>

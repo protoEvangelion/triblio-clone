@@ -1,0 +1,144 @@
+.quote-video {
+	padding-bottom: 5em;
+	width: 50%;
+
+	.preheading {
+		padding-top: 6.5em;
+	}
+
+	.quote-container {
+		height: auto;
+		max-width: 520px;
+		padding: 4.7em 1em 0 1.3em;
+	}
+
+	.video {
+		height: 270px;
+		margin: 0 auto;
+		max-width: 480px;
+		position: relative;
+		width: 90%;
+
+		&:hover {
+			cursor: pointer;
+
+			.play {
+				circle {
+					fill: #fff;
+				}
+
+				.outerCircle {
+					fill: url(#play_linear2);
+				}
+
+				.playButton {
+					fill: url(#play_linear);
+				}
+			}
+		}
+
+		.play {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.video-img {
+			border-radius: 10px;
+			box-shadow: $elevation2;
+			height: 100%;
+			opacity: 1;
+			transition-duration: 0.3s;
+			transition: opacity, visibility;
+			visibility: visible;
+			width: 100%;
+		}
+
+		.video-logo {
+			background: $lightColor;
+			border-radius: 8px;
+			box-shadow: $elevation1;
+			height: 99px;
+			left: 15%;
+			position: absolute;
+			top: 82%;
+			width: 230px;
+		}
+
+		.video-youtube {
+			border-radius: 10px;
+			box-shadow: $elevation2;
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+			visibility: hidden;
+		}
+	}
+
+	.video.active {
+		.video-img {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.video-logo {
+			opacity: 0;
+			transform: translateY(90%);
+			transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		}
+
+		.video-youtube {
+			height: 100%;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity, visibility;
+			transition-duration: 1s;
+
+			.fluid-width-video-wrapper {
+				height: 100%;
+				padding-top: unset !important;
+				position: static;
+				width: 100%;
+
+				iframe {
+					position: static;
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(tablet, phone) {
+	.quote-video {
+		width: 100%;
+
+		.preheading {
+			padding-top: 0;
+		}
+
+		.quote-container {
+			margin: 0 auto;
+			padding: 6rem 0;
+		}
+
+		.video {
+			width: 100%;
+
+			.video-img {
+				background-position: center;
+			}
+		}
+	}
+}
+
+@include respond-to(phone) {
+	.quote-video {
+		padding-bottom: 3.5rem;
+
+		.preheading {
+			margin: 1rem 0;
+		}
+	}
+}

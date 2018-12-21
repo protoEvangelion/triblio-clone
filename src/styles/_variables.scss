@@ -1,0 +1,81 @@
+/* ---------- Borders ---------- */
+
+$borderRadius: 4px;
+
+/* ---------- Breakpoints ---------- */
+
+$breakpointTablet: 768px;
+$breakpointPhone: 575px;
+
+$transitionDefault: all 0.25s ease-in-out;
+
+/* ---------- Triblio Colors ---------- */
+
+$black: #383f4c;
+$blue: #00adef;
+$blue2: #47c6f5;
+$blue3: #1aa0e8;
+$grey: #cfcfce;
+$grey2: #7d8b94;
+$green1: #79cd51;
+$green2: #19ab4f;
+$white: #fff;
+
+/* ---------- Liferay Colors ---------- */
+
+$accent1Color: #1aa0e8;
+$accent2Color: #e06e31;
+$accent3Color: #d33a2f;
+$accent4Color: #42bfc2;
+$accent5Color: #e55e75;
+$accent6Color: #19ab4f;
+$accent7Color: #503690;
+$accent8Color: #fdcc4a;
+$accent9Color: #47c6f5;
+$darkColor: #09101d; /* rgb(9, 16, 29) */
+$errorColor: #da1414; /* rgb(218, 20, 20) */
+$infoColor: #2e5aac; /* rgb(46, 90, 172) */
+$lightColor: #fff; /* rgb(255, 255, 255) */
+$neutral1Color: #1b324b; /* rgb(27, 50, 75) */
+$neutral2Color: #364a64; /* rgb(54, 74, 100) */
+$neutral3Color: #50657d; /* rgb(80, 101, 125) */
+$neutral4Color: #647480; /* rgb(100, 116, 128) */
+$neutral5Color: #7d8b94; /* rgb(125, 139, 148) */
+$neutral6Color: #a2aeb3; /* rgb(162, 174, 179) */
+$neutral7Color: #c4cacb; /* rgb(196, 202, 203) */
+$neutral8Color: #e8e8e7; /* rgb(232, 232, 231) */
+$neutral9Color: #f7f8f9; /* rgb(247, 248, 249) */
+$primaryColor: #0b63ce; /* rgb(11, 99, 206) */
+$secondaryColor: #134194; /* rgb(19, 65, 148) */
+$successColor: #287d3c; /* rgb(40, 125, 60) */
+$warningColor: #b95000; /* rgb(185, 80, 0) */
+
+/* ---------- Elevation ---------- */
+
+$shadowBlurColor: rgba($darkColor, 0.16);
+$shadowMainColor: rgba($darkColor, 0.8);
+$shadowStrongColor: rgba(0, 0, 0, 0.1525);
+
+$elevation1: 0 8px 40px rgba($darkColor, 0.08), 0 0 80px rgba($darkColor, 0.04);
+$elevation2: 0 12px 30px $shadowStrongColor, 0 12px 30px $shadowStrongColor;
+$elevation3: 0 3px 12px rgba($darkColor, 0.09), 0 0 4px rgba($darkColor, 0.06);
+$elevationReset: 0 0 0 0 $shadowBlurColor, 0 0 0 0 $shadowMainColor;
+
+/* ---------- Font ---------- */
+$fontColor: $neutral1Color;
+$fontWeightBold: 700;
+$fontWeightDefault: 400;
+$fontWeightExtraLight: 200;
+$fontWeightLight: 300;
+$fontWeightSemiBold: 600;
+
+/* ---------- Spacing ---------- */
+
+$largeSpacing: 3em;
+$smallSpacing: 0.5em;
+$standardSpacing: 1em;
+
+/* ---------- Transform ---------- */
+
+$hoverTranslate: translateY(calc(-3px + -1%));
+$hoverTranslateReset: translateY(0);

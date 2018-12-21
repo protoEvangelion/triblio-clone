@@ -1,0 +1,25 @@
+.branded-header {
+	color: #383f4c;
+	display: inline-block;
+	position: relative;
+
+	&:after {
+		background: linear-gradient(197.37deg, #79cd51 0%, #19ab4f 83.33%);
+		content: '';
+		display: block;
+		height: 0.5rem;
+		left: 0;
+		max-width: 50px;
+		position: absolute;
+		top: -1.5rem;
+		width: 2rem;
+	}
+
+	@include respond-to(tablet) {
+		&.center:after {
+			left: 50%;
+			transform: translateX(-50%);
+			width: 4rem;
+		}
+	}
+}

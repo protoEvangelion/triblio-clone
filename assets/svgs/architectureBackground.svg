@@ -1,0 +1,22 @@
+<svg width="1167" height="764" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect x="1103" width="64" height="57" rx="8" fill="#F9F9FB"/>
+	<rect x="377" y="163" width="665" height="601" rx="8" fill="#F9F9FB"/>
+	<rect x="148" y="347" width="284" height="297" rx="8" fill="#F9F9FB"/>
+	<g opacity=".3" filter="url(#filter0_dd)">
+		<rect x="243" y="503" width="190" height="150" rx="8" fill="#79CD51"/>
+	</g>
+	<rect y="29" width="135" height="141" rx="8" fill="#F9F9FB"/>
+	<defs>
+		<filter id="filter0_dd" x="213" y="485" width="250" height="210" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="12"/>
+			<feGaussianBlur stdDeviation="15"/>
+			<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.152485 0"/>
+			<feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+			<feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="12"/>
+			<feGaussianBlur stdDeviation="15"/>
+			<feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.152485 0"/>
+			<feBlend in2="effect1_dropShadow" result="effect2_dropShadow"/><feBlend in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+		</filter>
+	</defs>
+</svg>

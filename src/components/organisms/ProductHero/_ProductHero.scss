@@ -1,0 +1,96 @@
+.product-hero-wrapper {
+	background: #f7f8f9;
+	max-width: none;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: -1;
+
+	svg {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
+
+	.info-block-collection {
+		@extend %spacing;
+	}
+}
+
+.product-hero {
+	box-sizing: border-box;
+	margin: auto;
+	padding-top: 9rem;
+	padding-bottom: 15rem;
+	width: 100%;
+
+	@extend %spacing;
+
+	h2 {
+		margin-bottom: 5.5rem;
+		font-weight: bold;
+
+		@extend %font-spec-1;
+	}
+
+	> h1 {
+		display: block;
+		font-weight: $fontWeightSemiBold;
+		margin-bottom: 0.5rem;
+		font-size: 1.125rem;
+	}
+
+	img {
+		border-radius: 8px;
+		box-shadow: $elevation2;
+		max-width: 870px;
+		width: 63%;
+	}
+
+	.button-image-container {
+		align-items: flex-start;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.button-image-container > * {
+		display: inline;
+	}
+
+	@include respond-to(phone) {
+		padding-top: 4rem;
+		padding-bottom: 9rem;
+
+		h1 {
+			margin-bottom: 3rem;
+		}
+
+		> span {
+			color: lighten($black, 20%);
+			margin-bottom: 1rem;
+		}
+
+		.button-image-container {
+			flex-direction: column;
+
+			button {
+				margin-bottom: 3.5rem;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.button-image-container img {
+		margin-right: -3vw;
+		max-width: 80%;
+		width: 60vw;
+	}
+}

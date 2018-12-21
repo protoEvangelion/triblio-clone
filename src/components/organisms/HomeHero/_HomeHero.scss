@@ -1,0 +1,55 @@
+.hero {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 11.875rem;
+	text-align: center;
+
+	> a {
+		margin-bottom: 5rem;
+	}
+
+	h3 {
+		max-width: 60%;
+		z-index: 1;
+	}
+
+	.arrow-down {
+		height: 22px;
+		width: 80px;
+	}
+
+	.arrow-wrapper {
+		height: 5rem;
+		padding-top: 2rem;
+		width: 5rem;
+
+		svg {
+			position: sticky;
+			top: 2rem;
+		}
+	}
+
+	.heading {
+		margin-bottom: 1.5rem;
+	}
+
+	.sub-heading {
+		@extend %font-spec-4;
+	}
+
+	@include respond-to(phone) {
+		padding-top: 11rem;
+
+		> button {
+			margin-bottom: 13.125rem;
+		}
+
+		h1,
+		h3 {
+			max-width: 100%;
+		}
+	}
+}

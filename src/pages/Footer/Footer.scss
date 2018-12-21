@@ -1,0 +1,225 @@
+@import '../../styles/variables';
+// @import '../../styles/utilities';
+// @import '../../components/molecules/Accordion/Accordion';
+
+#main-footer {
+	display: none;
+}
+
+.triblio-custom {
+	.footer {
+		background: initial;
+		margin: auto;
+		padding-top: 80px;
+
+		&,
+		& .w50 {
+			display: flex;
+		}
+
+		h4 {
+			font-weight: normal;
+		}
+
+		h4,
+		.nav-item {
+			font-size: 14.4px;
+			line-height: 18px;
+		}
+
+		.additional-links {
+			float: right;
+		}
+
+		.footer-navigation,
+		.footer-base {
+			padding: 0 24px;
+		}
+
+		.column {
+			&.w33 {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+			}
+
+			a {
+				color: rgba(100, 100, 100, 0.5);
+				margin-right: 40px;
+
+				&.column-heading {
+					color: rgba(100, 100, 100, 1);
+				}
+			}
+		}
+
+		.footer-address {
+			padding-top: 28px;
+		}
+
+		.footer-base {
+			margin-top: 62px;
+			padding-bottom: 20px;
+			position: relative;
+			width: 100%;
+
+			&:after {
+				background: linear-gradient(
+					181.23deg,
+					#79cd51 0%,
+					#19ab4f 83.33%
+				);
+				bottom: 0px;
+				content: '';
+				height: 4px;
+				left: 0px;
+				position: absolute;
+				width: 100%;
+			}
+
+			a,
+			span {
+				color: #383f4c;
+				font-size: 11.5px;
+				line-height: 16px;
+			}
+		}
+
+		.footer-navigation .block {
+			padding-right: 40px;
+
+			li {
+				padding-bottom: 32px;
+			}
+		}
+
+		.mobile {
+			display: none;
+			padding: 8px;
+
+			& > svg {
+				margin-bottom: 40px;
+			}
+
+			aside {
+				padding: 0px;
+			}
+
+			.accordion {
+				background-color: #fff;
+				border-radius: 12px;
+				box-shadow: $elevation3;
+				box-sizing: border-box;
+				margin-bottom: 16px;
+
+				&.isOpen .title:after {
+					background: -webkit-linear-gradient(
+						252.63deg,
+						#79cd51 0%,
+						#19ab4f 83.33%
+					);
+					background: linear-gradient(
+						197.37deg,
+						#79cd51 0%,
+						#19ab4f 83.33%
+					);
+					bottom: -22px;
+					content: '';
+					height: 4px;
+					left: 0;
+					position: absolute;
+					width: 24px;
+				}
+			}
+
+			.nav-item {
+				padding-bottom: 32px;
+			}
+
+			.title {
+				font-size: 18px;
+				line-height: 24px;
+				position: relative;
+			}
+		}
+
+		.nav-item a {
+			color: #647480;
+			font-weight: 600;
+		}
+
+		.social-media-icons a {
+			margin-right: 24px;
+		}
+
+		.toggle-icon-container svg {
+			stroke-width: 2px;
+		}
+	}
+
+	.animated-background .footer {
+		svg .bg-animate-change {
+			fill: white;
+		}
+
+		.accordion {
+			background: rgba(0, 0, 0, 0.2);
+			box-shadow: none;
+
+			&.isOpen .title:after {
+				background: #fff;
+			}
+		}
+
+		.additional-links,
+		.footer-address p,
+		.footer-base a,
+		.footer-base span,
+		.nav-item a {
+			color: #d7ffc4;
+		}
+
+		.mobile,
+		.mobile a,
+		.nav-item-header {
+			color: #fff;
+		}
+
+		.social-media-icons svg path {
+			fill: #d7ffc4;
+		}
+	}
+
+	@media all and (max-width: 767px) {
+		.footer {
+			padding: 80px 0 0;
+		}
+
+		.footer .footer-base {
+			display: flex;
+			flex-direction: column-reverse;
+			margin-top: 24px;
+			padding: 0 24px 20px;
+
+			&:after {
+				margin-top: 20px;
+				bottom: initial;
+			}
+		}
+
+		.footer .footer-navigation,
+		.footer .w50 .triblio-logo {
+			display: none;
+		}
+
+		.footer .mobile {
+			display: block;
+			width: 100%;
+		}
+
+		.footer .w50 {
+			padding: 8px 24px;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.fade-heading {
+	max-width: 85%;
+
+	.static-text {
+		background: white;
+		padding-left: 0.2em;
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	.word-animation-container {
+		display: inline-block;
+		height: 1.3em;
+		line-height: normal;
+		position: relative;
+		text-align: right;
+		width: 3.2em;
+		z-index: -1;
+
+		.animated-word {
+			color: $green2;
+			display: inline-block;
+			z-index: -1;
+		}
+
+		$duration: 3s;
+
+		@for $i from 1 through 3 {
+			@include text-animation(#{$i});
+
+			.animated-word-#{$i} {
+				animation: animation#{$i}
+					$duration
+					ease-in-out
+					$duration *
+					($i - 1) +
+					0.5s
+					both;
+			}
+		}
+	}
+
+	@media screen and (max-width: 416px) {
+		.static-text {
+			padding-left: 0;
+		}
+
+		.word-animation-container {
+			display: block;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

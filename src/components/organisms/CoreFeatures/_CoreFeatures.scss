@@ -1,0 +1,130 @@
+.core-features {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: -5rem;
+	max-width: none;
+	padding: 0 0 9rem;
+	position: relative;
+	width: 100%;
+
+	.feature {
+		&:first-of-type svg {
+			max-width: 128px;
+			height: 128px;
+		}
+
+		&:nth-of-type(2) {
+			transform: translateY(-8rem);
+
+			svg {
+				width: 9rem;
+				height: 9rem;
+			}
+		}
+
+		&:nth-of-type(3) svg {
+			width: 10rem;
+			height: 8.25rem;
+		}
+
+		&:nth-of-type(4) {
+			transform: translateY(-12rem);
+
+			svg {
+				width: 8rem;
+				height: 8rem;
+			}
+		}
+	}
+
+	.mobile-svg-bg {
+		display: none;
+		z-index: -1;
+	}
+
+	.svg-stroke-curve {
+		height: 100%;
+		left: 0;
+		margin-bottom: -5rem;
+		position: sticky;
+		right: 0;
+		top: 100px;
+		width: 100%;
+		z-index: -1;
+	}
+
+	@media all and (max-width: 991px) {
+		margin-top: -1.5rem;
+		padding-bottom: 0;
+
+		.svg-stroke-curve {
+			margin-bottom: -6rem;
+			bottom: 100px;
+		}
+	}
+
+	@media all and (max-width: 500px) {
+		flex-direction: column;
+		padding: 3rem 1rem 10rem 0;
+		margin-top: 0;
+
+		.back-layer-svg-bg,
+		.top-layer-svg-bg {
+			display: none;
+		}
+
+		.mobile-svg-bg {
+			display: block;
+			transform: translateY(-9rem);
+		}
+
+		.feature {
+			&:first-of-type svg {
+				height: 4.375rem;
+				width: 4.375rem;
+			}
+
+			&:nth-of-type(2) {
+				transform: translateY(0);
+
+				svg {
+					height: 4.5rem;
+					width: 4.5rem;
+				}
+			}
+
+			&:nth-of-type(3) svg {
+				width: 5rem;
+				height: 4.25rem;
+			}
+
+			&:nth-of-type(4) {
+				transform: translateY(0);
+
+				svg {
+					width: 4rem;
+					height: 4rem;
+				}
+			}
+		}
+
+		.svg-stroke-curve {
+			height: 450px;
+			left: -2.7rem;
+			margin-bottom: 0;
+			position: absolute;
+			top: -150px;
+			transform-origin: left;
+			transform: rotate(90deg);
+			width: 500px;
+		}
+	}
+
+	@media all and (max-width: 350px) {
+		.svg-stroke-curve {
+			height: 500px;
+		}
+	}
+}

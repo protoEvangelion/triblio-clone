@@ -1,0 +1,200 @@
+%font {
+	color: $fontColor;
+	font: 400 18px/1.5 'Source Sans Pro', Tahoma, 'Trebuchet MS', sans-serif;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+%spacing {
+	box-sizing: border-box;
+	max-width: 1200px;
+	padding: 0 4rem;
+	margin: 0 auto;
+
+	@media all and (max-width: 768px) {
+		padding: 0 2rem;
+	}
+
+	@media screen and (max-width: 500px) {
+		padding: 0 1rem;
+	}
+}
+
+%active-dropdown {
+	height: auto;
+	line-height: initial;
+	opacity: 1;
+	overflow: visible;
+	visibility: visible;
+
+	transform: translateX(0);
+}
+
+%flex-center {
+	@include align-items(center);
+	@include flexbox;
+	@include justify-content(center);
+}
+
+%headings {
+	font-weight: $fontWeightSemiBold;
+	line-height: 1.25;
+}
+
+%popup-box {
+	background: $lightColor;
+
+	border-radius: 0.25em;
+	box-shadow: $elevation3;
+	box-sizing: border-box;
+}
+
+%textblock {
+	margin: 0 0 16px;
+}
+
+/* ---------- Fonts ---------- */
+
+%font-spec-fine-print {
+	font-size: 11.5px;
+	line-height: 16px;
+
+	@extend %textblock;
+}
+
+%font-spec-1 {
+	color: $black;
+	font-family: 'Source Sans Pro';
+	font-size: 69px;
+	font-weight: $fontWeightBold;
+	line-height: 80px;
+
+	@extend %headings;
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 50px;
+		line-height: 58px;
+	}
+
+	@media all and (max-width: 991px) {
+		font-size: 39px;
+		font-weight: $fontWeightSemiBold;
+		line-height: 45px;
+	}
+
+	@media all and (max-width: 768px) {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+
+%font-spec-2 {
+	font-family: 'Source Sans Pro';
+	font-size: 55px;
+	line-height: 64px;
+	font-weight: 700;
+
+	@extend %headings;
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 40px;
+		line-height: 46px;
+	}
+
+	@media all and (max-width: 991px) {
+		font-size: 32px;
+		line-height: 38px;
+	}
+}
+
+%font-spec-3 {
+	font-family: 'Source Sans Pro';
+	font-size: 44px;
+	line-height: 48px;
+
+	@extend %headings;
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 32px;
+		line-height: 35px;
+	}
+
+	@media all and (max-width: 991px) {
+		font-size: 29px;
+		line-height: 31px;
+	}
+}
+
+%font-spec-4 {
+	font-family: 'Source Sans Pro';
+	font-size: 35px;
+	line-height: 40px;
+
+	@extend %headings;
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 26px;
+		line-height: 29px;
+	}
+}
+
+%font-spec-5 {
+	font-family: 'Source Sans Pro';
+	font-size: 28px;
+	line-height: 32px;
+
+	@extend %headings;
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 23px;
+		line-height: 26px;
+	}
+}
+
+%font-spec-6 {
+	font-family: 'Source Sans Pro';
+	font-size: 23px;
+	line-height: 24px;
+
+	@extend %headings;
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+%font-spec-large {
+	font-size: 35px;
+	line-height: 48px;
+
+	@extend %textblock;
+
+	@media all and (max-width: 1199px) {
+		font-size: 26px;
+		line-height: 35px;
+	}
+}
+
+%font-spec-small {
+	font-size: 14.4px;
+	line-height: 16px;
+
+	@extend %textblock;
+}
+
+%small-caps {
+	font-size: 14.4px;
+	font-weight: $fontWeightDefault;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	@extend %textblock;
+}

@@ -1,0 +1,71 @@
+.architecture-block {
+	background-color: #F3F5F2;
+	border-radius: 8px;
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: center;
+	width: calc(100% - 1.25em);
+
+	&.inline-architecture-block {
+		width: 28.5%;
+	}
+
+	&.outside-architecture-block {
+		background-color: #FFF;
+		font-size: 18px;
+		max-width: 14rem;
+		padding: 0.5rem !important;
+		position: absolute;
+
+		&.left-bottom {
+			right: calc(100% + 2rem);
+			top: 54%;
+		}
+
+		&.left-top {
+			right: calc(100% + 2rem);
+			top: 8%;
+		}
+
+		&.right-bottom {
+			left: calc(100% + 2rem);
+			top: 54%;
+		}
+
+		&.right-top {
+			left: calc(100% + 2rem);
+			top: 8%;
+		}
+
+		@include respond-to(phone, tablet) {
+			width: auto;
+		}
+	}
+
+	.architecture-tool-tip {
+		background-color: #FFF !important;
+		border-bottom-color: inherit !important;
+		border-bottom-style: solid !important;
+		border-bottom-width: 8px !important;
+		border-radius: 6px !important;
+		color: #383F4C !important;
+		font-size: 18px !important;
+		font-weight: $fontWeightDefault !important;
+		max-width: 14em;
+		opacity: 1 !important;
+	}
+
+	.outside-subheading {
+		bottom: 100%;
+		left: 0;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+
+		.divider-line {
+			height: 44px;
+			margin-top: 0.25em;
+			width: 12px;
+		}
+	}
+}
